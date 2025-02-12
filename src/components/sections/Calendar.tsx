@@ -17,7 +17,7 @@ const css = `
     display: none;
   }
   .rdp-weekdays {
-    font-size: 30px;
+    font-size: 24px;
   }
   .rdp-weekday {
     font-weight: bold;
