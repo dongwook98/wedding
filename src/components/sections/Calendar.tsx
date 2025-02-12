@@ -39,16 +39,18 @@ const css = `
 export default function Calendar({ date }: { date: string }) {
   const weddingDate = parseISO(date);
   return (
-    <Section>
-      <div className={cx('wrap-header')}>
-        <span className={cx('txt-date')}>
-          {format(weddingDate, 'yyyy.MM.dd')}
-        </span>
-        <span className={cx('txt-time')}>
-          {format(weddingDate, 'aaa h시 eeee', { locale: ko })}
-        </span>
-      </div>
-
+    <Section
+      title={
+        <div className={cx('wrap-header')}>
+          <span className={cx('txt-date')}>
+            {format(weddingDate, 'yyyy.MM.dd')}
+          </span>
+          <span className={cx('txt-time')}>
+            {format(weddingDate, 'aaa h시 eeee', { locale: ko })}
+          </span>
+        </div>
+      }
+    >
       <div className={cx('wrap-daypicker')}>
         <style>{css}</style>
         <DayPicker
