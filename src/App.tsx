@@ -2,11 +2,13 @@ import { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
 
 import styles from './App.module.scss';
+import { Wedding } from '@models/wedding';
 import FullScreenMessage from '@shared/FullScreenMessage';
 import Heading from '@components/sections/Heading';
 import Video from '@components/sections/Video';
 import ImageGallery from '@components/sections/ImageGallery';
-import { Wedding } from '@models/wedding';
+import Intro from '@components/sections/Intro';
+import Invitation from './components/sections/Invitation';
 
 const cx = classNames.bind(styles);
 
@@ -51,13 +53,21 @@ function App() {
     return null;
   }
 
-  const { date, galleryImages } = wedding;
+  const { date, galleryImages, groom, bride, location, message } = wedding;
 
   return (
     <div className={cx('container')}>
       <Heading date={date} />
       <Video />
       <ImageGallery images={galleryImages} />
+      <Intro
+        groomName={groom.name}
+        brideName={bride.name}
+        date={date}
+        locationName={location.name}
+        message={message.intro}
+      />
+      <Invitation message={message.invitation} />
       {JSON.stringify(wedding)}
     </div>
   );
