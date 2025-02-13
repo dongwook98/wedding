@@ -8,11 +8,11 @@ import Heading from '@components/sections/Heading';
 import Video from '@components/sections/Video';
 import ImageGallery from '@components/sections/ImageGallery';
 import Intro from '@components/sections/Intro';
-import Invitation from './components/sections/Invitation';
-import Calendar from './components/sections/Calendar';
-import Map from './components/sections/Map';
-import Contact from './components/sections/Contact';
-import Share from './components/sections/Share';
+import Invitation from '@components/sections/Invitation';
+import Calendar from '@components/sections/Calendar';
+import Map from '@components/sections/Map';
+import Contact from '@components/sections/Contact';
+import Share from '@components/sections/Share';
 
 const cx = classNames.bind(styles);
 

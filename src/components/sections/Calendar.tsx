@@ -2,10 +2,10 @@ import classNames from 'classnames/bind';
 import { parseISO, format } from 'date-fns';
 import { ko } from 'date-fns/locale';
 import { DayPicker } from 'react-day-picker';
-
 import 'react-day-picker/style.css';
+
 import styles from './Calendar.module.scss';
-import Section from '../shared/Section';
+import Section from '@shared/Section';
 
 const cx = classNames.bind(styles);
 

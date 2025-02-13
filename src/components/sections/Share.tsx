@@ -5,7 +5,7 @@ import { parseISO, format } from 'date-fns';
 import { ko } from 'date-fns/locale';
 
 import styles from './Share.module.scss';
-import Section from '../shared/Section';
+import Section from '@shared/Section';
 
 declare global {
   interface Window {

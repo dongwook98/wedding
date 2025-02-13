@@ -1,7 +1,7 @@
 import { parseISO, format, getDay } from 'date-fns';
 import classNames from 'classnames/bind';
-import styles from './Heading.module.scss';
 
+import styles from './Heading.module.scss';
 import Section from '@shared/Section';
 
 const cx = classNames.bind(styles);

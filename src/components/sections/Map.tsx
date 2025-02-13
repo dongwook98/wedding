@@ -1,8 +1,8 @@
-import classNames from 'classnames/bind';
-import styles from './Map.module.scss';
-
-import Section from '@shared/Section';
 import { useEffect, useRef } from 'react';
+import classNames from 'classnames/bind';
+
+import styles from './Map.module.scss';
+import Section from '@shared/Section';
 import { Location } from '@/models/wedding';
 
 declare global {

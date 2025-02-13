@@ -1,7 +1,7 @@
+import { PropsWithChildren, useState } from 'react';
 import classNames from 'classnames/bind';
 
 import styles from './Accordion.module.scss';
-import { PropsWithChildren, useState } from 'react';
 
 const cx = classNames.bind(styles);
 
