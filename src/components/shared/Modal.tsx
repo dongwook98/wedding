@@ -1,4 +1,4 @@
-import classNames from 'classnames';
+import classNames from 'classnames/bind';
 
 import styles from './Modal.module.scss';
 import Dimmed from '@shared/Dimmed';
@@ -13,7 +13,6 @@ interface ModalProps {
   onRightButtonClick: () => void;
   leftButtonLabel?: string;
   onLeftButtonClick: () => void;
-  onClose: () => void;
 }
 
 export default function Modal({
