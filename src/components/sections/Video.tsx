@@ -14,6 +14,8 @@ export default function Video() {
         loop={true}
         poster='/assets/poster.jpg'
       >
+        <source src='/assets/main.webm' type='video/webm'></source>
+        {/* webm 지원안하는 브라우저를 위한 폴백 mp4 지원 */}
         <source src='/assets/main.mp4' type='video/mp4'></source>
       </video>
     </Section>
