@@ -4,6 +4,8 @@ import {
   PropsWithChildren,
   useContext,
   useState,
+  useCallback,
+  useMemo,
 } from 'react';
 import { createPortal } from 'react-dom';
 
@@ -31,18 +33,22 @@ export function ModalContext({ children }: PropsWithChildren) {
 
   const $portal_root = document.getElementById('root-portal');
 
-  const open = (options: ModalOptions) => {
+  // useCallback: 리렌더링시 함수 캐시
+  const open = useCallback((options: ModalOptions) => {
     setModalState({ ...options, open: true });
-  };
+  }, []);
 
-  const close = () => {
+  const close = useCallback(() => {
     setModalState(defaultValues);
-  };
+  }, []);
 
-  const values = {
-    open,
-    close,
-  };
+  const values = useMemo(
+    () => ({
+      open,
+      close,
+    }),
+    [open, close]
+  );
 
   return (
     <Context.Provider value={values}>
