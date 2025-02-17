@@ -18,11 +18,7 @@ const cx = classNames.bind(styles);
 
 function App() {
   // 추상화
-  const { wedding, loading, error } = useWedding();
-
-  if (loading) {
-    return <FullScreenMessage type='loading' />;
-  }
+  const { wedding, error } = useWedding();
 
   if (error) {
     return <FullScreenMessage type='error' />;
