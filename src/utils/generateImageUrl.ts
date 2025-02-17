@@ -1,3 +1,4 @@
+// cloudinary cdn url 생성
 export default function generateImageUrl({
   filename,
   format,

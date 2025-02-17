@@ -1,7 +1,6 @@
 import classNames from 'classnames/bind';
 
 import styles from './App.module.scss';
-import FullScreenMessage from '@shared/FullScreenMessage';
 import Heading from '@components/sections/Heading';
 import Video from '@components/sections/Video';
 import ImageGallery from '@components/sections/ImageGallery';
@@ -17,12 +16,7 @@ import useWedding from './hooks/useWedding';
 const cx = classNames.bind(styles);
 
 function App() {
-  // 추상화
-  const { wedding, error } = useWedding();
-
-  if (error) {
-    return <FullScreenMessage type='error' />;
-  }
+  const { wedding } = useWedding(); // 추상화해서 컴포넌트 코드는 UI에 집중
 
   if (wedding == null) {
     return null;
